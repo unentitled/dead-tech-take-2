@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Drawing",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Drawing",
+  "parent":{
+    "name":"dead-tech",
+    "path":"dead-tech.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
