@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CastSpell",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CastSpell",
+  "parent":{
+    "name":"dead-tech",
+    "path":"dead-tech.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

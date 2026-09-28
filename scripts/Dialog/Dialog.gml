@@ -9,7 +9,8 @@ function create_dialog(_messages){
 char_colors = {
     "gindy": c_yellow,
     "Steven": c_aqua,
-    "autumn": c_maroon
+    "autumn": c_maroon,
+    "Player": c_teal
 }
 
 welcome_dialog = [
@@ -31,5 +32,16 @@ welcome_dialog = [
     {
         name: "Steven",
         msg: "final test message. Goodbye!"
+    },
+]
+
+pc_dialog = [
+    {
+        name: "Player",
+        msg: "this is a computer"
+    }, 
+    {
+        name: "Player",
+        msg: "type 'help' for commands"
     },
 ]

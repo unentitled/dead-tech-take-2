@@ -4,6 +4,12 @@ if (instance_exists(obj_dialog)) exit;
 var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 
+// i don't get this but fixes diagnal movement
+var _len = _hor != 0 || _ver != 0;
+var _dir = point_direction(0, 0, _hor, _ver);
+_hor = lengthdir_x(_len, _dir);
+_ver = lengthdir_y(_len,  _dir);
+
 move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, undefined, move_speed, move_speed);
 
 
@@ -58,4 +64,19 @@ if (keyboard_check_pressed(ord("F")))
     _inst.direction = facing;
     _inst.speed = 8;
     _inst.damage *= damage;
+}
+
+
+// Prevent player actions while typing in the console: needed? 
+if (instance_exists(obj_console) && obj_console.is_open) exit;
+
+// is this mapped already?
+var _keys = variable_struct_get_names(spells);
+for (var i = 0; i < array_length(_keys); i++) {
+    var _key_code = real(_keys[i]);
+    
+    if (keyboard_check_pressed(_key_code)) {
+        var _spell = spells[$ _keys[i]];
+        cast_spell(_spell);
+    }
 }

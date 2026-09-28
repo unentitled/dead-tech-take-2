@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Parse",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Parse",
+  "parent":{
+    "name":"dead-tech",
+    "path":"dead-tech.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
