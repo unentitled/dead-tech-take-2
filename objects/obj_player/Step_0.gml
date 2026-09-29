@@ -1,3 +1,6 @@
+
+// prevents movement when using dialog or console
+if (instance_exists(obj_console) && obj_console.is_open) exit; 
 if (instance_exists(obj_dialog)) exit;
 
 
@@ -67,8 +70,6 @@ if (keyboard_check_pressed(ord("F")))
 }
 
 
-// Prevent player actions while typing in the console: needed? 
-if (instance_exists(obj_console) && obj_console.is_open) exit;
 
 // is this mapped already?
 var _keys = variable_struct_get_names(spells);
@@ -79,4 +80,5 @@ for (var i = 0; i < array_length(_keys); i++) {
         var _spell = spells[$ _keys[i]];
         cast_spell(_spell);
     }
+    
 }

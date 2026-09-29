@@ -1,3 +1,4 @@
+if (instance_exists(obj_console) && obj_console.is_open) exit; 
 if (current_message < 0) exit; 
     
 var _str = messages[current_message].msg;

@@ -40,6 +40,7 @@ pc_dialog = [
         name: "Player",
         msg: "this is a computer"
     }, 
+    
     {
         name: "Player",
         msg: "type 'help' for commands"

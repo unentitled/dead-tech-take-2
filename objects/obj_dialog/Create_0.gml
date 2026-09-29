@@ -1,3 +1,4 @@
+// todo: change create to script to change vars globally. might be helpful for different text speeds
 messages = [];
 current_message = -1;
 current_char = 0;
