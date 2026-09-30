@@ -4,8 +4,8 @@ if (instance_exists(obj_console) && obj_console.is_open) exit;
 if (instance_exists(obj_dialog)) exit;
 
 
-var _hor = keyboard_check(ord("D")) - keyboard_check(ord("A"));
-var _ver = keyboard_check(ord("S")) - keyboard_check(ord("W"));
+var _hor = keyboard_check(vk_right) - keyboard_check(vk_left);
+var _ver = keyboard_check(vk_down) - keyboard_check(vk_up);
 
 // i don't get this but fixes diagnal movement
 var _len = _hor != 0 || _ver != 0;
@@ -43,34 +43,6 @@ else
 }
 
 
-
-
-if (keyboard_check_pressed(vk_space)) 
-{
-    var _inst = instance_create_depth(x, y, depth, obj_attack_slash);
-    _inst.image_angle = facing;
-    _inst.damage *= damage;
-}
-if (keyboard_check_pressed(ord("C"))) 
-{
-    var _inst = instance_create_depth(x, y, depth, obj_attack_shield);
-    _inst.image_angle = facing + 90;
-    _inst.damage *= damage;
-}
-
-// projectile test
-if (keyboard_check_pressed(ord("F")))
-{
-    // todo: make this a function for reuse
-    var _inst = instance_create_depth(x, y, depth, obj_attack_projectile);
-    _inst.image_angle = facing + 90;
-    _inst.direction = facing;
-    _inst.speed = 8;
-    _inst.damage *= damage;
-}
-
-
-
 // is this mapped already?
 var _keys = variable_struct_get_names(spells);
 for (var i = 0; i < array_length(_keys); i++) {
@@ -78,7 +50,11 @@ for (var i = 0; i < array_length(_keys); i++) {
     
     if (keyboard_check_pressed(_key_code)) {
         var _spell = spells[$ _keys[i]];
-        cast_spell(_spell);
+        var _cd = spell_cooldown(_spell.shape);
+        
+        if (current_time - _spell.last_cast >= _cd) {
+            _spell.last_cast = current_time;
+            cast_spell(_spell);
+        }
     }
-    
 }

@@ -8,7 +8,8 @@ function parse(_input_string) {
     var _spell = {
         element: "neutral",
         shape: "slash",
-        key_bound: -1
+        key_bound: -1,
+        last_cast: -999999999
     };
     
     // gets params from _tokens
@@ -19,16 +20,15 @@ function parse(_input_string) {
         // place element modifiers here. Make sure 
         if (_token == "fire" || 
             _token == "water" || 
-            _token == "lightning") {
+            _token == "lightning" ||
+            _token == "ice") {
             _spell.element = _token;
         }
         // place attack shape modifiers here
-        else if (_token == "cone" ||
-            _token == "projectile" ||
-            _token == "beam" ||
+        else if (_token == "projectile" ||
             _token == "slash" ||
-            _token == "shield"
-            ) {
+            _token == "shield" ||
+            _token == "bomb") {
             _spell.shape = _token;
         }
         

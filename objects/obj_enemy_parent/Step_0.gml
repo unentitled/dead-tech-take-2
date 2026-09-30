@@ -1,8 +1,22 @@
 if (instance_exists(obj_dialog)) exit;
 
-if alarm[1] >=0 
-{
-    move_speed  = 4;
+if (burn_time > 0) {
+    burn_time--;
+    burn_tick--;
+    if (burn_tick <= 0) {
+        burn_tick = BURN_TICK_FRAMES;
+        hp -= BURN_TICK_DAMAGE;
+        if (hp <= 0) instance_destroy();
+    }
+}
+
+if (stun_time > 0) {
+    stun_time--;
+    exit;
+}
+
+if (knockback_time > 0) {
+    knockback_time--;
     target_x = x + knockback_x;
     target_y = y + knockback_y;
     move_speed = 1;
