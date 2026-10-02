@@ -1,10 +1,9 @@
-// todo: change create to script to change vars globally. might be helpful for different text speeds
 messages = [];
 current_message = -1;
 current_char = 0;
 draw_message = "";
 
-char_speed = 0.5;
+char_speed = 1;
 input_key = vk_space;
 
 gui_w = display_get_gui_width();
