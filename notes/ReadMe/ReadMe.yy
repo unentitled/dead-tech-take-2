@@ -2,6 +2,7 @@
   "$GMNotes":"v1",
   "%Name":"ReadMe",
   "name":"ReadMe",
+  "openedOnFirstLoad":true,
   "parent":{
     "name":"dead-tech",
     "path":"dead-tech.yyp",

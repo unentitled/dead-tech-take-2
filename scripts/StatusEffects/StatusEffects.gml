@@ -1,5 +1,5 @@
-#macro KNOCKBACK_FRAMES       20
-#macro KNOCKBACK_FRAMES_WATER 36
+#macro KNOCKBACK_FRAMES       5
+#macro KNOCKBACK_FRAMES_WATER 10
 #macro BURN_FRAMES            180
 #macro BURN_TICK_FRAMES       30
 #macro BURN_TICK_DAMAGE       1
