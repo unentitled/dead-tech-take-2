@@ -3,15 +3,15 @@
 #macro BURN_FRAMES            180
 #macro BURN_TICK_FRAMES       30
 #macro BURN_TICK_DAMAGE       1
-#macro STUN_FRAMES            30
+#macro STUN_FRAMES            60
 #macro HACKED_FRAMES          240
 #macro HACKED_DAMAGE_MULT     2
 
 function apply_element(_element) { 
     switch (_element) {
         case "fire":      burn_time = BURN_FRAMES; burn_tick = BURN_TICK_FRAMES; break;
-        case "lightning": stun_time = STUN_FRAMES; break;
-        case "ice":       hacked_time = HACKED_FRAMES; break;
+        case "lightning": hacked_time = HACKED_FRAMES; break;
+        case "ice":       stun_time = STUN_FRAMES; break;
     }
 }
 

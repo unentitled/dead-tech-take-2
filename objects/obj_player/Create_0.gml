@@ -1,18 +1,31 @@
-move_speed = 1;
+move_speed = 1.5;
 
 tilemap = layer_tilemap_get_id("Tiles_Col");
 
-hp = 10;
-hp_total = hp;
+// global vars that keep through rooms
+if (!variable_global_exists("spells")) {
+    global.hp       = 10;
+    global.hp_total = 10;
+    global.spells   = {};
+}
+hp       = global.hp;
+hp_total = global.hp_total;
+spells   = global.spells;
+
 damage = 1;
 facing = 0;
-spells = {};
 
 
+// dash
+dash_time   = 0;           
+dash_dir    = 0;           
+last_dash   = -999999999;  
 
-level = 1;
+// dash settings
+#macro DASH_SPEED       4
+#macro DASH_FRAMES      6
+#macro DASH_COOLDOWN    500
 
-
-//todo implement
+//todo: implement
 mp = 10;
 mp_total = mp;

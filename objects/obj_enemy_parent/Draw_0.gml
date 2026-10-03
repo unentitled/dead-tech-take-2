@@ -26,11 +26,11 @@ if (burn_time > 0) {
 }
 
 if (stun_time > 0) {
-    draw_set_color(c_yellow);
+    draw_set_color(c_aqua);
     for (var i = 0; i < 2; i++) {
-        var _sx = x + random_range(-10, 10);
-        var _sy = y - random_range(4, 16);
-        draw_line(_sx, _sy, _sx + random_range(-5, 5), _sy + random_range(-5, 5));
+        var _ex = x + random_range(-8, 8);
+        var _ey = y - random_range(4, 20);
+        draw_rectangle(_ex, _ey, _ex + 2, _ey + 2, false);
     }
 }
 

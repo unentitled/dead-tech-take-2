@@ -1,7 +1,7 @@
 function create_dialog(_messages){
     if (instance_exists(obj_dialog)) return;
         
-    var _inst = instance_create_depth(0, 0, 0, obj_dialog)
+    var _inst = instance_create_depth(0, 0, -100, obj_dialog)
     _inst.messages = _messages
     _inst.current_message = 0;
 }
@@ -44,13 +44,32 @@ welcome_dialog = [
 
 pc_dialog = [
     {
-        name: "PC",
-        msg: "this is a computer"
+        name: "Antigone",
+        msg: "> console help"
     }, 
-    
     {
         name: "PC",
-        msg: "type 'help' for commands"
+        msg: "Press the tab key to open your spell console"
+    },
+    {
+        name: "PC",
+        msg: "Spells are formatted as such: ELEMENT ATTACK BIND 1-5"
+    },
+    {
+        name: "PC",
+        msg: "Elements include: 'fire' 'water' 'lightning' 'ice'"
+    },
+    {
+        name: "PC",
+        msg: "Attacks include: 'slash' 'projectile' 'shield' 'bomb'"
+    },
+    {
+        name: "PC",
+        msg: "To save your spell, type bind, then a number 1-5"
+    },
+    {
+        name: "PC",
+        msg: "Example: press tab -> then type 'fire slash bind 4'. When you press 4, a fire sword attack appears!"
     },
 ]
 

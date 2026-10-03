@@ -3,6 +3,7 @@ function parse(_input_string) {
     var _tokens = string_split(_cleaned, " ");
     var _count = array_length(_tokens);
     var _needs_help = false;
+    var _immediate_cast = false;
     
     // default spell container
     var _spell = {
@@ -17,7 +18,7 @@ function parse(_input_string) {
         var _token = _tokens[i];
         
         
-        // place element modifiers here. Make sure 
+        // place element modifiers here. make sure 
         if (_token == "fire" || 
             _token == "water" || 
             _token == "lightning" ||
@@ -30,6 +31,10 @@ function parse(_input_string) {
             _token == "shield" ||
             _token == "bomb") {
             _spell.shape = _token;
+        }
+        
+        else if (_token == "cast") {
+            _immediate_cast = true;
         }
         
         // keybind logic
@@ -51,8 +56,15 @@ function parse(_input_string) {
         }
     }
     
-    // binds spell
-    if (_spell.key_bound != -1 && instance_exists(obj_player)) {
-        obj_player.spells[$ string(_spell.key_bound)] = _spell;
-    }
+
+    // casts spell immediately
+    if (instance_exists(obj_player)) {
+        if (_immediate_cast) {
+            with (obj_player) cast_spell(_spell);
+        }
+        // binds spell
+        else if (_spell.key_bound != -1) {
+            obj_player.spells[$ string(_spell.key_bound)] = _spell;
+        }
+}
 }

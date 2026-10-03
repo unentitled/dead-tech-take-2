@@ -6,7 +6,7 @@ alarm[0] = 60;
 
 tilemap = layer_tilemap_get_id("Tiles_Col");
 
-
+// initializers. change macros in StatusEffects script. 
 knockback_x = 0;
 knockback_y = 0;
 knockback_time = 0;
