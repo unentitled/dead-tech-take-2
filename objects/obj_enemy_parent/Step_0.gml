@@ -19,7 +19,11 @@ if (knockback_time > 0) {
     knockback_time--;
     target_x = x + knockback_x;
     target_y = y + knockback_y;
-    move_speed = 1;
+    move_speed = 5;
+}
+
+if (knockback_time = 0) {
+	move_speed = 1;
 }
 
 
