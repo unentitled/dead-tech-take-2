@@ -5,14 +5,15 @@
 #macro BOMB_BLINK_FRAMES 4
 
 // shield settings
-#macro SHIELD_FRAMES     180
+#macro SHIELD_FRAMES     600
+#macro SHIELD_BREAK		 90
 
 // cooldown times
 function spell_cooldown(_shape) {
     switch (_shape) {
         case "slash":      return 300;
         case "projectile": return 500;
-        case "shield":     return 5000;
+        case "shield":     return 12000;
         case "bomb":       return 2500;
         default:           return 500;
     }
