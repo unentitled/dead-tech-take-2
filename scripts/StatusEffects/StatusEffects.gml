@@ -16,6 +16,7 @@ function apply_element(_element) {
 }
 
 function take_hit(_dmg, _from_x, _from_y, _element = "none") {
+    if (is_hazard) return false;
     if (alarm[1] >= 0) return false;
 
     if (hacked_time > 0) _dmg *= HACKED_DAMAGE_MULT;

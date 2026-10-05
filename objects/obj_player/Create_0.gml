@@ -19,12 +19,16 @@ facing = 0;
 // dash
 dash_time   = 0;           
 dash_dir    = 0;           
-last_dash   = -999999999;  
+last_dash   = -999999999;
+is_iframe = false;
 
 // dash settings
 #macro DASH_SPEED       4
 #macro DASH_FRAMES      6
 #macro DASH_COOLDOWN    500
+
+// slow down: used for hazards
+#macro LAVA_SLOWDOWN   0.5
 
 //todo: implement
 mp = 10;

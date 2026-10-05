@@ -1,7 +1,9 @@
 with (all)
 {
-    depth = -bbox_bottom;
-    
+    if (!variable_instance_exists(id, "is_hazard") || !is_hazard)
+    {
+        depth = -bbox_bottom;
+    }
 }
 
 

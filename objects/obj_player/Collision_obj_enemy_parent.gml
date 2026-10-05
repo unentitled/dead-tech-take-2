@@ -1,4 +1,3 @@
-// shoooouuullllddddd create i-frames for dash but I can't tell if it works.
 if (is_iframe == true) exit;
 
 if (alarm[0] < 0) {

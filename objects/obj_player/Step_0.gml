@@ -7,7 +7,7 @@ if (instance_exists(obj_dialog)) exit;
 if (dash_time > 0) {
     move_and_collide(lengthdir_x(DASH_SPEED, dash_dir),
                      lengthdir_y(DASH_SPEED, dash_dir),
-                     tilemap, undefined, undefined, undefined, DASH_SPEED, DASH_SPEED);
+                     [tilemap, obj_door_parent], undefined, undefined, undefined, DASH_SPEED, DASH_SPEED);
 } 
 
 else {
@@ -19,9 +19,13 @@ else {
     var _dir = point_direction(0, 0, _hor, _ver);
     _hor = lengthdir_x(_len, _dir);
     _ver = lengthdir_y(_len,  _dir);
-
-    move_and_collide(_hor * move_speed, _ver * move_speed, tilemap, undefined, undefined, undefined, move_speed, move_speed);
-
+    
+    // slowed while standing in a hazard
+    var _spd = move_speed;
+    if (place_meeting(x, y, obj_hazard_parent)) _spd *= LAVA_SLOWDOWN;
+        
+    move_and_collide(_hor * _spd, _ver * _spd, [tilemap, obj_door_parent], undefined, undefined, undefined, _spd, _spd);
+    
     if (_hor != 0 or _ver != 0) 
     {
         image_speed = 1;
@@ -45,15 +49,20 @@ else {
 
 
 // dash logic
-if (keyboard_check_pressed(vk_space)
-&& current_time - last_dash >= DASH_COOLDOWN) {
-    dash_time  = DASH_FRAMES;
-    dash_dir   = facing;      
-    last_dash  = current_time;
-    is_iframe     = true;
+
+if (dash_time > 0) {
+    dash_time--;
 }
-if (dash_time > 0) dash_time--;
-else is_iframe = false;
+else {
+    is_iframe = false;
+}
+
+if (keyboard_check_pressed(vk_space) && current_time - last_dash >= DASH_COOLDOWN) {
+    dash_time = DASH_FRAMES;
+    dash_dir = facing;
+    last_dash = current_time;
+    is_iframe = true;
+}
 
 
 
