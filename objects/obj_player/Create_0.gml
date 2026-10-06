@@ -24,7 +24,7 @@ is_iframe = false;
 
 // dash settings
 #macro DASH_SPEED       4
-#macro DASH_FRAMES      6
+#macro DASH_FRAMES      8
 #macro DASH_COOLDOWN    500
 
 // slow down: used for hazards
