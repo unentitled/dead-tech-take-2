@@ -1,3 +1,5 @@
+event_inherited();
+
 damage = 1;
 armed = true;
 //image_speed = 0;
