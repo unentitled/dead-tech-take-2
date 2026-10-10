@@ -6,3 +6,4 @@ shoot_interval = 8;
 spiral_angle = 0;
 spiral_step = 15;
 bullet_speed = 3;
+mp_reward = .25;

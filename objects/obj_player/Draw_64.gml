@@ -21,6 +21,19 @@ draw_sprite_stretched_ext(spr_box, 1, _dx, _dy, _health_barw, _barh, c_red, 0.6)
 draw_text(_dx + _barw / 2, _dy + _barh / 2, "HP");
 
 
+// MP bar
+
+var _mp_y = _dy + _barh + 8;
+var _mp_barw = _barw * clamp(mp / mp_total, 0, 1);
+
+// MP bar drop shadow
+draw_sprite_stretched_ext( spr_box, 1, _dx + 4, _mp_y + 4, _barw, _barh, c_black, 0.4 );
+
+// MP bar background and blue fill
+draw_sprite_stretched(spr_box, 0, _dx, _mp_y, _barw, _barh);
+draw_sprite_stretched_ext( spr_box, 1, _dx, _mp_y, _mp_barw, _barh, c_blue, 0.6 );
+draw_text(_dx + _barw / 2, _mp_y + _barh / 2, "MP");
+
 // Reset properties
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
@@ -53,7 +66,9 @@ draw_sprite_stretched_ext(spr_window, 0, _wx + 4, _wy + 4, _ww, _wh, c_black, 0.
 draw_sprite_stretched(spr_window, 0, _wx, _wy - 6, _ww, _wh);
 
 // title text in last param.
-draw_text(_wx + 8, _wy - 6, "Spells");
+draw_set_color(#ECECEC)
+
+draw_text(_wx + 8, _wy - 5, "Spells");
 
 // individual box logic
 for (var i = 0; i < 5; i++) {
@@ -62,7 +77,7 @@ for (var i = 0; i < 5; i++) {
 
 
     // key number
-    draw_set_color(c_gray);
+    draw_set_color(c_dkgray);
     draw_text(_bx + 2, _y + 2, string(i + 1));
 
     var _key = string(ord(string(i + 1)));

@@ -1,11 +1,33 @@
 #macro KNOCKBACK_FRAMES       5
 #macro KNOCKBACK_FRAMES_WATER 10
-#macro BURN_FRAMES            180
-#macro BURN_TICK_FRAMES       30
+#macro BURN_FRAMES            100
+#macro BURN_TICK_FRAMES       50
 #macro BURN_TICK_DAMAGE       1
+#macro BURN_SPEED_MULT        3
 #macro STUN_FRAMES            60
 #macro HACKED_FRAMES          240
 #macro HACKED_DAMAGE_MULT     2
+
+
+function defeat_enemy(_enemy) {
+    with (_enemy) {
+        if (!defeated) {
+            defeated = true;
+
+            if (mp_reward > 0) {
+                global.mp = min(global.mp + mp_reward, global.hp_total);
+
+                if (instance_exists(obj_player)) {
+                    with (obj_player) {
+                        mp = global.mp;
+                    }
+                }
+            }
+
+            instance_destroy();
+        }
+    }
+}
 
 function apply_element(_element) { 
     switch (_element) {
@@ -32,6 +54,6 @@ function take_hit(_dmg, _from_x, _from_y, _element = "none") {
 
     apply_element(_element);
 
-    if (hp <= 0) instance_destroy();
+    if (hp <= 0) defeat_enemy(id);
     return true;
 }

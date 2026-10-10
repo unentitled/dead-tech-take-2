@@ -30,6 +30,8 @@ is_iframe = false;
 // slow down: used for hazards
 #macro LAVA_SLOWDOWN   0.5
 
-//todo: implement
-mp = 10;
-mp_total = mp;
+// MP, used for healing
+if (!variable_global_exists("mp")) global.mp = 0;
+
+mp = global.mp;
+mp_total = hp_total;

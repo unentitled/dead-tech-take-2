@@ -15,3 +15,7 @@ burn_tick = 0;
 stun_time = 0;
 hacked_time = 0;
 is_hazard = false;
+
+// used for MP
+mp_reward = 1;
+defeated = false;

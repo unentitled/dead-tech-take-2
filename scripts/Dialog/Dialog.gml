@@ -69,7 +69,7 @@ pc_dialog = [
     },
     {
         name: "PC",
-        msg: "Example: press tab -> then type 'fire slash bind 4'. When you press 4, a fire sword attack appears!"
+        msg: "Example: press tab -> then type 'water slash bind 4'. When you press 4, a water sword attack appears!"
     },
 ]
 

@@ -4,6 +4,7 @@ function parse(_input_string) {
     var _count = array_length(_tokens);
     var _needs_help = false;
     var _immediate_cast = false;
+    var _heal_requested = false;
     
     // default spell container
     var _spell = {
@@ -15,6 +16,7 @@ function parse(_input_string) {
     
     // gets params from _tokens
     for (var i = 0; i < _count; i++) {
+        
         var _token = _tokens[i];
         
         
@@ -35,6 +37,11 @@ function parse(_input_string) {
         
         else if (_token == "cast") {
             _immediate_cast = true;
+        }
+        
+        
+        else if (_token == "heal") {
+            _heal_requested = true;
         }
         
         // keybind logic
@@ -59,6 +66,18 @@ function parse(_input_string) {
 
     // casts spell immediately
     if (instance_exists(obj_player)) {
+        if (_heal_requested) {
+            with (obj_player) {
+            var _missing = max(0, hp_total - hp);
+            var _spent = min(mp, _missing);
+
+            hp += _spent;
+            mp -= _spent;
+
+            global.hp = hp;
+            global.mp = mp;
+        }
+    }
         if (_immediate_cast) {
             with (obj_player) cast_spell(_spell);
         }

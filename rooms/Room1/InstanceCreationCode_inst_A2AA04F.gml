@@ -1,0 +1,27 @@
+// kinda dumb but 
+door_keys = [
+    inst_key_enemy1,
+    inst_key_enemy2,
+    inst_key_enemy3,
+    inst_key_enemy4,
+    inst_key_enemy5,
+    inst_key_enemy6,
+    inst_key_enemy7,
+    inst_key_enemy8,
+    inst_key_enemy9,
+    inst_key_enemy10,
+    inst_key_enemy11,
+    inst_key_enemy12,
+    inst_key_enemy13,
+    inst_key_enemy14,
+    inst_key_enemy15,
+    inst_key_enemy16,
+    inst_key_enemy17,
+    inst_key_enemy18,
+    inst_key_enemy19,
+    inst_key_enemy20,
+    inst_key_enemy21,
+    inst_key_enemy22,
+    inst_key_enemy23,
+    inst_key_enemy24
+]
