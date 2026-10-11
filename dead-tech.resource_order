@@ -67,6 +67,11 @@
     {"name":"spr_talk","order":7,"path":"sprites/spr_talk/spr_talk.yy",},
     {"name":"spr_tileset","order":3,"path":"sprites/spr_tileset/spr_tileset.yy",},
     {"name":"spr_window","order":24,"path":"sprites/spr_window/spr_window.yy",},
+    {"name":"Sprite37","order":7,"path":"sprites/Sprite37/Sprite37.yy",},
+    {"name":"Sprite38","order":8,"path":"sprites/Sprite38/Sprite38.yy",},
+    {"name":"Sprite39","order":1,"path":"sprites/Sprite39/Sprite39.yy",},
+    {"name":"Sprite40","order":9,"path":"sprites/Sprite40/Sprite40.yy",},
     {"name":"TileSet1","order":18,"path":"tilesets/TileSet1/TileSet1.yy",},
+    {"name":"TileSet2","order":35,"path":"tilesets/TileSet2/TileSet2.yy",},
   ],
 }
