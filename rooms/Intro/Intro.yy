@@ -17,8 +17,8 @@
   ],
   "name":"Intro",
   "parent":{
-    "name":"dead-tech",
-    "path":"dead-tech.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

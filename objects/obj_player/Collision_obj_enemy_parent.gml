@@ -9,6 +9,7 @@ if (alarm[0] < 0) {
     
     if (hp <= 0) {
         global.hp = global.hp_total;  // full heal for the respawn
+        global.endless_wave = 0;      // endless mode: death resets to wave 1
         room_restart();
     }
 }

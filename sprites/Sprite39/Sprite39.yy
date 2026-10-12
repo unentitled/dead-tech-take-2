@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"dead-tech",
+    "path":"dead-tech.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

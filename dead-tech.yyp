@@ -57,6 +57,9 @@
     {"id":{"name":"obj_npc1","path":"objects/obj_npc1/obj_npc1.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_switch","path":"objects/obj_switch/obj_switch.yy",},},
+    {"id":{"name":"obj_wave_manager","path":"objects/obj_wave_manager/obj_wave_manager.yy",},},
+    {"id":{"name":"obj_wave_spawn","path":"objects/obj_wave_spawn/obj_wave_spawn.yy",},},
+    {"id":{"name":"EndlessArena","path":"rooms/EndlessArena/EndlessArena.yy",},},
     {"id":{"name":"Intro","path":"rooms/Intro/Intro.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"CastSpell","path":"scripts/CastSpell/CastSpell.yy",},},
@@ -64,6 +67,7 @@
     {"id":{"name":"Drawing","path":"scripts/Drawing/Drawing.yy",},},
     {"id":{"name":"Parse","path":"scripts/Parse/Parse.yy",},},
     {"id":{"name":"StatusEffects","path":"scripts/StatusEffects/StatusEffects.yy",},},
+    {"id":{"name":"WaveMode","path":"scripts/WaveMode/WaveMode.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_battle_screen","path":"sprites/spr_battle_screen/spr_battle_screen.yy",},},
     {"id":{"name":"spr_bomb_icon","path":"sprites/spr_bomb_icon/spr_bomb_icon.yy",},},
@@ -114,6 +118,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Intro","path":"rooms/Intro/Intro.yy",},},
+    {"roomId":{"name":"EndlessArena","path":"rooms/EndlessArena/EndlessArena.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

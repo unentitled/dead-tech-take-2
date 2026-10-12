@@ -23,12 +23,7 @@ if (knockback_time > 0) {
 }
 
 else {
-    move_speed = (burn_time > 0) ? BURN_SPEED_MULT : 1;
-}
-
-if (knockback_time = 0) {
-	move_speed = 1;
-	if (burn_time > 0) move_speed = 1 * BURN_SPEED_MULT;
+    move_speed = ((burn_time > 0) ? BURN_SPEED_MULT : 1) * speed_mult;
 }
 
 var _dx = target_x - x;

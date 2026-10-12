@@ -19,3 +19,6 @@ is_hazard = false;
 // used for MP
 mp_reward = 1;
 defeated = false;
+
+// difficulty scaling (set by wave manager)
+speed_mult = 1;

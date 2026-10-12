@@ -5,6 +5,7 @@ function parse(_input_string) {
     var _needs_help = false;
     var _immediate_cast = false;
     var _heal_requested = false;
+    var _endless_requested = false;
     
     // default spell container
     var _spell = {
@@ -44,6 +45,10 @@ function parse(_input_string) {
             _heal_requested = true;
         }
         
+        else if (_token == "endless") {
+            _endless_requested = true;
+        }
+        
         // keybind logic
         else if (_token == "bind" && i + 1 < _count) {
             var _key_str = _tokens[i + 1];
@@ -66,6 +71,11 @@ function parse(_input_string) {
 
     // casts spell immediately
     if (instance_exists(obj_player)) {
+        if (_endless_requested) {
+            global.endless_wave = 0;
+            room_goto(EndlessArena);
+            exit;
+        }
         if (_heal_requested) {
             with (obj_player) {
             var _missing = max(0, hp_total - hp);

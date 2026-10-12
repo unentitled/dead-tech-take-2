@@ -45,14 +45,14 @@ welcome_dialog = [
 congrats_dialog = [
     {
     name: "PC",
-    msg: "Congratulations!"
+    msg: "Congratulations! Press tab and type 'endless' to warp to endless mode"
     }
 ]
 
 pc_dialog = [
     {
         name: "Antigone",
-        msg: "> console help"
+        msg: "> help"
     }, 
     {
         name: "PC",
