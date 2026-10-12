@@ -42,6 +42,13 @@ welcome_dialog = [
     },
 ]
 
+congrats_dialog = [
+    {
+    name: "PC",
+    msg: "Congratulations!"
+    }
+]
+
 pc_dialog = [
     {
         name: "Antigone",

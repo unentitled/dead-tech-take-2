@@ -1,0 +1,1 @@
+door_keys = [inst_enemy1, inst_enemy2]

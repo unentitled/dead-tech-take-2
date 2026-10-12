@@ -1,0 +1,1 @@
+door_keys = [inst_2ABDD4B]
