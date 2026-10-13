@@ -12,6 +12,13 @@ if (fuse <= 0) {
         }
     }
     
+    with (obj_switch) {
+    if (point_distance(x, y, other.x, other.y) <= other.radius) {
+        activated = true;
+        instance_destroy();
+    }
+}
+    
     var _ex = instance_create_depth(x, y, depth, obj_attack_explosion);
     _ex.image_blend = image_blend;
     
