@@ -2,3 +2,8 @@ function draw_shadow(_offset = 0)
 {
     draw_sprite_ext(spr_shadow, 0, x, y + _offset, 1, 1, 0, -1, 0.4);
 }
+
+function draw_shadow_alt(_offset = 0)
+{
+    draw_sprite_ext(spr_shadow, 0, x + 8, y + 11 + _offset, 1, 1, 0, -1, 0.4);
+}

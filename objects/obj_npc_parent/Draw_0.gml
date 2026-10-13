@@ -1,3 +1,5 @@
+if (!visible) exit;
+
 draw_shadow();
 draw_self();
 

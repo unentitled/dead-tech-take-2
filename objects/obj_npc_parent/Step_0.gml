@@ -2,6 +2,7 @@ if (instance_exists(obj_dialog)) exit;
     
 if (instance_exists(obj_console) && obj_console.is_open) exit;
 
+if (!visible) exit;
 
 if (instance_exists(obj_player) && distance_to_object(obj_player) < 8)
 {
