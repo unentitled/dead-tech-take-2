@@ -955,7 +955,7 @@ intro_dialog = [
 	},
 	{
 		name: "PC",
-		msg: "(My hunch as right, though. The Oracles are already reporting  their target's been neutralized.)"
+		msg: "(My hunch was right, though. The Oracles are already reporting their target's been neutralized.)"
 	},
 	{
 		name: "PC",
@@ -1031,11 +1031,11 @@ intro_dialog = [
 	},
 	{
 		name: "Antigone",
-		msg: "...Not sure I can answer that. I'd rather not have to think about the semantics. I'm not dead now, though."
+		msg: "...Not sure I can answer that. I'd rather not think about the semantics. I'm not... dead now, though..."
 	},
 	{
 		name: "Antigone",
-		msg: "But I should... get home. Before the Oracles know that."
+		msg: "But I should... get home. Before... the Oracles know that..."
 	},
 	{
 		name: "Hei",
@@ -1055,7 +1055,7 @@ intro_dialog = [
 	},
 	{
 		name: "Antigone",
-		msg: "Thank you... Marin..."
+		msg: "...Thank you... Marin..."
 	},
 	{
 		name: "Marin",
