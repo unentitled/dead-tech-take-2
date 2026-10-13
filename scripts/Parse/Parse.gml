@@ -6,6 +6,7 @@ function parse(_input_string) {
     var _immediate_cast = false;
     var _heal_requested = false;
     var _endless_requested = false;
+	var _logout_requested = false;
     
     // default spell container
     var _spell = {
@@ -48,6 +49,10 @@ function parse(_input_string) {
         else if (_token == "endless") {
             _endless_requested = true;
         }
+		
+		else if (_token == "logout") {
+			_logout_requested = true;
+		}
         
         // keybind logic
         else if (_token == "bind" && i + 1 < _count) {
@@ -88,6 +93,11 @@ function parse(_input_string) {
             global.mp = mp;
         }
     }
+		if (_logout_requested) {
+			global.hp = global.hp_total;  // full heal for the respawn
+			global.endless_wave = 0;   
+			room_restart();
+		}
         if (_immediate_cast) {
             with (obj_player) cast_spell(_spell);
         }
